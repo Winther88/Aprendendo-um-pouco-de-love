@@ -5,17 +5,15 @@ local EiMineImage = {
     posX = 370,
     posY = 100,
     sizeX = 1,
-    sizeY = 1.5
+    sizeY = 1
 }
 
-local EiMineText = love.graphics.newText("Fala galerinha!!!")
+local font = love.graphics.getFont()
 
-function love.load()
-
-end
+local EiMineText = love.graphics.newText(font, "fala galerinha")
 
 function love.draw()
-    love.graphics.draw(EiMineText, 500, 500)
-    love.graphics.draw(EiMineImage.path, EiMineImage.posX, EiMineImage.posY)
+    love.graphics.draw(EiMineText, 600, 0)
     love.graphics.scale(EiMineImage.sizeX, EiMineImage.sizeY)
+    love.graphics.draw(EiMineImage.path, EiMineImage.posX, EiMineImage.posY)
 end
